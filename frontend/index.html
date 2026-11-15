@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutrition Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>RAG DEMO</h1>
+        <p class="sub">Ask questions about <em>Human Nutrition (2020 Edition)</em>. Answers come only from the book.</p>
+      </div>
+      <span id="status" class="status" title="Backend status">connecting…</span>
+    </header>
+
+    <main id="chat" aria-live="polite">
+      <div class="msg bot">
+        <div class="bubble">Hi! Ask me anything from the textbook, for example:</div>
+        <div class="chips">
+          <button class="chip">What is the role of water in the human body?</button>
+          <button class="chip">What is the role of protein?</button>
+          <button class="chip">How are carbohydrates digested?</button>
+        </div>
+      </div>
+    </main>
+
+    <form id="form" autocomplete="off">
+      <input id="question" type="text" placeholder="Type your question…" maxlength="1000" required />
+      <label class="k" title="Number of passages retrieved">
+        Passages
+        <select id="k">
+          <option>2</option>
+          <option>3</option>
+          <option selected>4</option>
+          <option>6</option>
+          <option>8</option>
+        </select>
+      </label>
+      <button id="send" type="submit">Ask</button>
+    </form>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+
+</html>
